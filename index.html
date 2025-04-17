@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gulf War Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div id="menu">
+    <h1>Choose Your Side</h1>
+    <button onclick="selectSide('us')">United States</button>
+    <button onclick="selectSide('iraq')">Iraq</button>
+  </div>
+
+  <div id="password-entry" style="display:none;">
+    <h2 id="side-label"></h2>
+    <input type="password" id="password" placeholder="Enter Password" />
+    <button onclick="joinGame()">Enter</button>
+  </div>
+
+  <div id="battlefield" style="display:none;">
+    <canvas id="canvas" width="1200" height="800"></canvas>
+    <div id="log"></div>
+    <button onclick="goToMenu()">Back to Menu</button>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
